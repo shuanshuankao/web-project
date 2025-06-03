@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            text-align: center;
+        }
+
+        .news{
+            background-color: rgb(113, 243, 243);
+            width: 50%;
+            margin: 2.5% auto;
+            border-radius: 1.5%;
+            padding: 1%;
+        }
+    </style>
+</head>
+<body>
+    <h1>最新消息!!!</h1>
+    {% for todo in todos %}
+    <div class="news">
+        <h1>{{todo.title}}</h1>
+        <small>{{todo.created}}</small>
+        {% if todo.text %}
+        <li><h2>{{todo.text}}</h2></li>
+        {% endif %}
+        {% if todo.important %}
+        <p style="color: red;"><b>重要</b></p>
+        {% endif %}
+        <hr>
+    </div>
+    {% endfor %}
+    
+</body>
+</html>
