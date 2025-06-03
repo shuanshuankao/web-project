@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            text-align: center;
+        }
+
+        .news{
+            background-color: rgb(113, 243, 243);
+            width: 50%;
+            margin: 2.5% auto;
+            border-radius: 1.5%;
+            padding: 1%;
+        }
+    </style>
+</head>
+<body>
+    <h1>消息</h1>
+    {% if not todo %}
+    <h3 style="color: red;"><b>編號錯誤，請重新輸入</b></h3>
+    {% else %}
+    {{todo}}
+    {% endif %}
+</body>
+</html>
